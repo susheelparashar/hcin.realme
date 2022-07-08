@@ -2,53 +2,32 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-07T20:23:36 IST" name="Default suite" finished-at="2022-07-07T20:24:37 IST" duration-ms="60455">
+  <suite started-at="2022-07-07T23:09:06 IST" name="Default suite" finished-at="2022-07-07T23:11:48 IST" duration-ms="162821">
     <groups>
     </groups>
-    <test started-at="2022-07-07T20:23:36 IST" name="Default test" finished-at="2022-07-07T20:24:37 IST" duration-ms="60455">
+    <test started-at="2022-07-07T23:09:06 IST" name="Default test" finished-at="2022-07-07T23:11:48 IST" duration-ms="162821">
       <class name="testScripts.TC1">
-        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T20:23:36 IST" name="bMethod" finished-at="2022-07-07T20:23:39 IST" duration-ms="2970" status="PASS">
+        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T23:09:06 IST" name="bMethod" finished-at="2022-07-07T23:09:09 IST" duration-ms="3139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bMethod -->
-        <test-method signature="test()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T20:23:39 IST" name="test" finished-at="2022-07-07T20:24:37 IST" duration-ms="57445" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="test()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T23:09:09 IST" name="test" finished-at="2022-07-07T23:11:48 IST" duration-ms="159649" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[element click intercepted: Element <li _ngcontent-lru-c198="" class="li-size">...</li> is not clickable at point (543, 211). Other element would receive the click: <div _ngcontent-lru-c46="" id="loading" class="global-loader">...</div>
-  (Session info: chrome=103.0.5060.114)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'INL20-IAAAABDD', ip: '10.49.81.220', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c90f046e8311429a83c297e36cab52b4, clickElement {id=01643827-c03d-4f06-932b-977f8db2571f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58829}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58829/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (c90f046e8311429a83c297e36cab52b4)] -> xpath: /html/body/app-root/div/app-dashboard/div/ul/li[1]]
-Session ID: c90f046e8311429a83c297e36cab52b4]]>
+              <![CDATA[Argument is of an illegal type: org.openqa.selenium.By$ByXPath]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li _ngcontent-lru-c198="" class="li-size">...</li> is not clickable at point (543, 211). Other element would receive the click: <div _ngcontent-lru-c46="" id="loading" class="global-loader">...</div>
-  (Session info: chrome=103.0.5060.114)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'INL20-IAAAABDD', ip: '10.49.81.220', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c90f046e8311429a83c297e36cab52b4, clickElement {id=01643827-c03d-4f06-932b-977f8db2571f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58829}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58829/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (c90f046e8311429a83c297e36cab52b4)] -> xpath: /html/body/app-root/div/app-dashboard/div/ul/li[1]]
-Session ID: c90f046e8311429a83c297e36cab52b4
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-at pages.login.signin(login.java:72)
+              <![CDATA[java.lang.IllegalArgumentException: Argument is of an illegal type: org.openqa.selenium.By$ByXPath
+at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:84)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:498)
+at pages.login.signin(login.java:137)
 at testScripts.TC1.test(TC1.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -80,11 +59,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T20:24:37 IST" name="aMethod" finished-at="2022-07-07T20:24:37 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.TC1@5ba3f27a]" started-at="2022-07-07T23:11:48 IST" name="aMethod" finished-at="2022-07-07T23:11:48 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aMethod -->

@@ -11,10 +11,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.DBManager;
+import utilities.scrollPage;
 
 public class login {
 	
@@ -67,10 +69,10 @@ public class login {
 		driver.findElement(By.xpath(pr.getProperty("continue"))).click();
 		
 		//select apply for ujjwal card
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(pr.getProperty("applyForUjjwalCard"))))).click();
-		
+				
 		//enter mobile number
 		driver.findElement(By.xpath(pr.getProperty("mobileNumber"))).sendKeys(mobile);
 		driver.findElement(By.xpath(pr.getProperty("continue1"))).click();
@@ -79,14 +81,13 @@ public class login {
 		driver.findElement(By.xpath(pr.getProperty("name"))).sendKeys("ram");
 		driver.findElement(By.xpath(pr.getProperty("email"))).sendKeys("susheel.parashar@homecredit.co.in");
 		driver.findElement(By.xpath(pr.getProperty("dob"))).sendKeys("22/11/2000");
-		Thread.sleep(5000);
+				
 		
-		//scrolldown
-		WebElement mobileLinkedNo=driver.findElement(By.xpath(pr.getProperty("mobileLinkedNo")));
-		scrollIntoView(mobileLinkedNo);
-		mobileLinkedNo.click();
-		Thread.sleep(5000);
-		
+		//mobile number linked with Aadhaar
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		WebElement no=  (WebElement) js.executeScript("return document.querySelector(\"#mat-radio-3 > label\")");
+		js.executeScript("arguments[0].click();", no);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(pr.getProperty("bank"))).click();
 		driver.findElement(By.xpath(pr.getProperty("hdfc"))).click();
 		Thread.sleep(1000);
@@ -122,6 +123,7 @@ public class login {
 		elementToBeClickable(cont_photo);
 		visibilityOfElementLocated(cont_photo);
 		cont_photo.click();
+		Thread.sleep(5000);
 		driver.findElement(By.xpath(pr.getProperty("capturePhoto"))).click();
 		WebElement confirm_photo=driver.findElement(By.xpath(pr.getProperty("confirm_photo")));
 		elementToBeClickable(confirm_photo);
@@ -132,8 +134,10 @@ public class login {
 		Thread.sleep(5000);
 		WebElement capture_pan=driver.findElement(By.xpath(pr.getProperty("capture_pan")));
 		scrollIntoView(capture_pan);
-		driver.findElement(By.xpath(pr.getProperty("checkBoxPan"))).click();
-		capture_pan.click();
+		js.executeScript("arguments[0].click();", By.xpath(pr.getProperty("checkBoxPan")));
+		Thread.sleep(2000);
+		js.executeScript("arguments[0].click();", By.xpath(pr.getProperty("capture_pan")));
+
 		
 	}
 

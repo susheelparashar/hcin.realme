@@ -26,13 +26,14 @@ public class baseClass {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("--disable-notifications");
+		o.addArguments("--window-size=1400,600");
 		o.addArguments("use-fake-ui-for-media-stream"); //turned on the real camera and mic.
 		driver = new ChromeDriver(o);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		
-		File f=new File("../com.hcin.realme/locators.properties"); 
+		File f=new File("../com.hcin.realme/config.properties"); 
 		FileReader fr=new FileReader(f);
 		pr=new Properties();
 		pr.load(fr);
