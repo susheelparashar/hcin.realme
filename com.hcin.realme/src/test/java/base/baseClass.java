@@ -30,8 +30,8 @@ public class baseClass {
 		o.addArguments("use-fake-ui-for-media-stream"); //turned on the real camera and mic.
 		driver = new ChromeDriver(o);
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
 		
 		File f=new File("../com.hcin.realme/config.properties"); 
 		FileReader fr=new FileReader(f);

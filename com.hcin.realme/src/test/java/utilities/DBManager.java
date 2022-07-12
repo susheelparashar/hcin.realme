@@ -24,7 +24,7 @@ public class DBManager {
 		this.pr=pr;
 	}
     
-    public String getOtp(String mobile) throws ClassNotFoundException, SQLException, IOException {
+    public String getOtp(String mobile) throws ClassNotFoundException, SQLException, IOException, InterruptedException {
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
         Connection con = DriverManager.getConnection(
@@ -34,7 +34,8 @@ public class DBManager {
         + pr.getProperty("serviceName") 
         + ")(SERVER=DEDICATED)))", pr.getProperty("dbUsername"), pr.getProperty("dbPassword"));
 
-        System.out.println("DB_ACK >> DB connected !"+mobile);
+        System.out.println("DB connected !"+mobile);
+        Thread.sleep(2000);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt
                 .executeQuery("Select otp from quest.consent_verification where id=(select Max(id) from quest.consent_verification where mobile ="+ mobile+")");
@@ -45,7 +46,7 @@ public class DBManager {
                 otp = String.valueOf(rs.getString("OTP"));
             }
         }
-        System.out.println("==(OTP)==");
+        System.out.println(otp);
         con.close();
         return otp;
 
