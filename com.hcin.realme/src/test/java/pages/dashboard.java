@@ -28,4 +28,18 @@ public class dashboard {
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("applyForUjjwalCard"))));
 		System.out.println("select apply for ujjwal card");	
 	}
+	
+	public void initiatePurchase() throws InterruptedException
+	{
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+			
+		//select initiatePurchase
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(pr.getProperty("initiatePurchase")))));
+		
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("initiatePurchase"))));
+		System.out.println("select initiate Purchase");	
+	
+	}
 }

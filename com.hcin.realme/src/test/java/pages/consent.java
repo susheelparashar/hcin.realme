@@ -37,14 +37,14 @@ public class consent {
 				
 	}
 
-	public void verifyOtp() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
-		String mobile = "6646541321";
-
+	public void verifyOtp(String mobile) throws InterruptedException, ClassNotFoundException, SQLException, IOException {
+		
 		// consent form
 		WebElement requestOtp = driver.findElement(By.xpath(pr.getProperty("requestOtp")));
 		scrollIntoView(requestOtp);
 		elementToBeClickable(requestOtp);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Thread.sleep(1000);
 		js.executeScript("arguments[0].click();", requestOtp);
 
 		// enter consent otp

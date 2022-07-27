@@ -13,14 +13,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.DBManager;
-import utilities.explicitWait;
 
-public class address {
+public class addressDigilocker {
 
 	Properties pr;
 	ChromeDriver driver;
 
-	public address(ChromeDriver driver, Properties pr) {
+	public addressDigilocker(ChromeDriver driver, Properties pr) {
 		this.driver = driver;
 		this.pr = pr;
 	}
@@ -43,30 +42,30 @@ public class address {
 
 		// address verification
 		Thread.sleep(500);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("addressVerification"))));
-		//driver.navigate().refresh();
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("addressVerificationDigilocker"))));
+		driver.navigate().refresh();
 		
 		// zoom out
 		System.out.println("star zooming out");
 		js.executeScript("document.body.style.zoom = '70%'");
-		Thread.sleep(500);
+		
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("drivingLicense"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_address"))));
 		System.out.println("driver license selected successfully");
 
 		// capture front address proof
-		Thread.sleep(5000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("capture_Front_address"))));
 		Thread.sleep(2000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("confirm_front_address"))));
+		js.executeScript("arguments[0].click();",
+				driver.findElement(By.xpath(pr.getProperty("capture_Front_address"))));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();",
+				driver.findElement(By.xpath(pr.getProperty("confirm_front_address"))));
 		System.out.println("captured front side of DL");
-		Thread.sleep(2000);
+		Thread.sleep(500);
 
 		// capture back address proof
-		explicitWait w=new explicitWait(driver, pr);
-		WebElement checkBoxAddress=driver.findElement(By.xpath(pr.getProperty("checkBoxAddress")));
-		w.elementToBeClickable(checkBoxAddress);
-		js.executeScript("arguments[0].click();", checkBoxAddress);
+		Thread.sleep(2000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("checkBoxAddress"))));
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("capture_back_address"))));
 		Thread.sleep(2000);
@@ -88,15 +87,17 @@ public class address {
 
 		// Correspondence address no
 		Thread.sleep(2000);
+		//WebElement corress_address_no = (WebElement) js.executeScript(
+		//		"return document.querySelector(\"#mat-radio-6 > label > span.mat-radio-label-content\")");
 		WebElement corress_address_no=driver.findElement(By.xpath(pr.getProperty("corress_address_no")));
 		js.executeScript("arguments[0].click();", corress_address_no);
-		Thread.sleep(2000);
+		
+		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_Res_address"))));
 
 		// housing type
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("owned"))));
-		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_housingType"))));
 		System.out.println("res address details captured successfully");
 	}

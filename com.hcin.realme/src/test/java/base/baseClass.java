@@ -27,6 +27,7 @@ public class baseClass {
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("--disable-notifications");
 		o.addArguments("--window-size=1400,600");
+		o.addArguments("--auto-open-devtools-for-tabs");
 		o.addArguments("use-fake-ui-for-media-stream"); //turned on the real camera and mic.
 		driver = new ChromeDriver(o);
 		driver.manage().window().maximize();

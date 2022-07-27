@@ -14,12 +14,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.DBManager;
 
-public class photo {
+public class photoDigilocker {
 
 	Properties pr;
 	ChromeDriver driver;
 
-	public photo(ChromeDriver driver, Properties pr) {
+	public photoDigilocker(ChromeDriver driver, Properties pr) {
 		this.driver = driver;
 		this.pr = pr;
 	}
@@ -42,7 +42,7 @@ public class photo {
 		// photo
 		Thread.sleep(500);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("photo"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("photo_digilocker"))));
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("cont_photo"))));
 		Thread.sleep(5000);

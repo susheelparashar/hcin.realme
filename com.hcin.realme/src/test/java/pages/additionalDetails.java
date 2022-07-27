@@ -63,7 +63,7 @@ public class additionalDetails {
 		Thread.sleep(2000);
 		
 		//joining fee
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("joiningFeeYes"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("joiningFeeNo"))));
 		Thread.sleep(1000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_joiningFee"))));
 		Thread.sleep(1000);

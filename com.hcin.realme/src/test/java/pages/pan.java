@@ -36,10 +36,10 @@ public class pan {
 
 	}
 
-	public void capturePan() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
+	public void capturePan(String panNo, String fathername, String mothername) throws InterruptedException, ClassNotFoundException, SQLException, IOException {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
+		
 		// zoom out
 		System.out.println("star zooming out");
 		js.executeScript("document.body.style.zoom = '70%'");
@@ -52,7 +52,6 @@ public class pan {
 		WebElement checkBoxPan=  (WebElement) js.executeScript("return document.querySelector(\"#mat-checkbox-1 > label > span.mat-checkbox-label > p\")");
 		js.executeScript("arguments[0].click();", checkBoxPan);
 		
-		//js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("checkBoxPan"))));
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("capture_pan"))));
 		Thread.sleep(2000);
@@ -86,8 +85,8 @@ public class pan {
 
 		// Pan details
 		Thread.sleep(500);
-		driver.findElement(By.xpath(pr.getProperty("panNo"))).sendKeys("JHKPP7678K");
-		driver.findElement(By.xpath(pr.getProperty("fatherName"))).sendKeys("Raghu Ram");
+		driver.findElement(By.xpath(pr.getProperty("panNo"))).sendKeys(panNo);
+		driver.findElement(By.xpath(pr.getProperty("fatherName"))).sendKeys(fathername);
 
 		// gender
 		Thread.sleep(500);
@@ -99,10 +98,11 @@ public class pan {
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("maritalStatus"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("married"))));
 
-		// mothername and secondary mobile no
+		// mother name 
 		Thread.sleep(500);
-		driver.findElement(By.xpath(pr.getProperty("motherName"))).sendKeys("Kamala Devi");
-		driver.findElement(By.xpath(pr.getProperty("secondaryMobile"))).sendKeys("9878767657");
+		driver.findElement(By.xpath(pr.getProperty("motherName"))).sendKeys(mothername);
+		
+		//click on continue
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_pan_details"))));
 		System.out.println("pan details captured successfully");
 	}

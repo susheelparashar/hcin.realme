@@ -24,27 +24,20 @@ public class clientDetails {
 		this.pr = pr;
 	}
 
-	public void personalDetails() throws InterruptedException {
+	public void personalDetails(String mobile, String dob, String fullname, String email) throws InterruptedException {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		Faker faker = new Faker(new Locale("en-IND"));
 		
-		// enter mobile number
-		//String mobile=faker.phoneNumber().cellPhone();
-		driver.findElement(By.xpath(pr.getProperty("mobileNumber"))).sendKeys("6646541321");
+		
+		driver.findElement(By.xpath(pr.getProperty("mobileNumber"))).sendKeys(mobile);
 		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue1"))));
 		System.out.println("mobile number entered successfully");
 
-		// zoom out
-		System.out.println("star zooming out");
-		js.executeScript("document.body.style.zoom = '80%'");
-
 		// details
-		String fullname=faker.name().firstName()+" "+faker.name().lastName();
 		driver.findElement(By.xpath(pr.getProperty("name"))).sendKeys(fullname);
-		String email=faker.name().firstName()+faker.name().lastName()+"@gmail.com";
 		driver.findElement(By.xpath(pr.getProperty("email"))).sendKeys(email);
-		driver.findElement(By.xpath(pr.getProperty("dob"))).sendKeys("22/11/2000");
+		System.out.println(dob);
+		driver.findElement(By.xpath(pr.getProperty("dob"))).sendKeys(dob);
 
 		// mobile number linked with Aadhaar
 		WebElement no = (WebElement) js.executeScript("return document.querySelector(\"#mat-radio-3 > label\")");

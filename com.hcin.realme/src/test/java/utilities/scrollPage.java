@@ -17,7 +17,7 @@ public class scrollPage {
 	}
 	
 	
-	public void scrollIntoView(String ele) throws InterruptedException
+	public void scrollIntoView(WebElement ele) throws InterruptedException
 	{
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
