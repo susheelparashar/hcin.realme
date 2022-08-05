@@ -34,16 +34,14 @@ public class VAS {
 		Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("offer"))));
-		
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_offers"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("offer selected successfully from standard offers");
 	}	
 	public void selectOnsiteGoSpillDrop() throws InterruptedException {
 		Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("offer"))));
-		
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_offers"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("offer selected successfully from standard offers");
 	}	
 	

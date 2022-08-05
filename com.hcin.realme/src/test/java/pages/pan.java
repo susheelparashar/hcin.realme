@@ -103,7 +103,7 @@ public class pan {
 		driver.findElement(By.xpath(pr.getProperty("motherName"))).sendKeys(mothername);
 		
 		//click on continue
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_pan_details"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("pan details captured successfully");
 	}
 }

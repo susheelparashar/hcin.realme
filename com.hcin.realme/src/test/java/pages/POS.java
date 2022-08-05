@@ -36,7 +36,7 @@ public class POS {
 		WebElement selectTestSalesroom=driver.findElement(By.xpath(pr.getProperty("selectTestSalesroom")));
 		js.executeScript("arguments[0].click();", selectTestSalesroom);
 		
-		WebElement continue_pos=driver.findElement(By.xpath(pr.getProperty("continue_pos")));
+		WebElement continue_pos=driver.findElement(By.xpath(pr.getProperty("continue")));
 		js.executeScript("arguments[0].click();", continue_pos);
 		System.out.println("select test salesroom POS ");
 	}

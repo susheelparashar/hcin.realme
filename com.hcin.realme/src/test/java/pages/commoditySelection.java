@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import utilities.explicitWait;
 import utilities.scrollPage;
 
 public class commoditySelection {
@@ -22,30 +23,37 @@ public class commoditySelection {
 
 	
 	public void selectCommodity() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("commodityCategory"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("mobiles"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("commodityType"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("mobilePhone"))));
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("model"))));
+		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("otherModel"))));
-		Thread.sleep(5000);
+		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("SKU"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("NA"))));
-		Thread.sleep(1000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_commoditySelection"))));
+		Thread.sleep(2000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("commodity details captured");
+		explicitWait w = new explicitWait(driver, pr);
+		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
+
 	}	
 	
 	public void verifyCommodity() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.findElement(By.xpath(pr.getProperty("commodityPrice"))).sendKeys("10000");
-		Thread.sleep(2000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_verifyCommodity"))));
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("commodity price captured");
+		explicitWait w = new explicitWait(driver, pr);
+		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
+
 	}	
 
 }

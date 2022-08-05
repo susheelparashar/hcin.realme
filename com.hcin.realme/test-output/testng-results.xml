@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-27T11:16:19 IST" name="Default suite" finished-at="2022-07-27T11:18:52 IST" duration-ms="152851">
+  <suite started-at="2022-08-05T11:33:28 IST" name="Default suite" finished-at="2022-08-05T11:35:20 IST" duration-ms="112038">
     <groups>
     </groups>
-    <test started-at="2022-07-27T11:16:19 IST" name="Default test" finished-at="2022-07-27T11:18:52 IST" duration-ms="152851">
-      <class name="testScripts.ACQ">
-        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-07-27T11:16:19 IST" name="bMethod" finished-at="2022-07-27T11:16:22 IST" duration-ms="2708" status="PASS">
+    <test started-at="2022-08-05T11:33:28 IST" name="Default test" finished-at="2022-08-05T11:35:20 IST" duration-ms="112038">
+      <class name="testScripts.TRX_CD_OnlyCommodity">
+        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.TRX_CD_OnlyCommodity@d5b810e]" started-at="2022-08-05T11:33:28 IST" name="bMethod" finished-at="2022-08-05T11:33:31 IST" duration-ms="3205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bMethod -->
-        <test-method signature="test()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-07-27T11:16:22 IST" name="test" finished-at="2022-07-27T11:18:52 IST" duration-ms="150111" status="FAIL">
+        <test-method signature="test()[pri:0, instance:testScripts.TRX_CD_OnlyCommodity@d5b810e]" started-at="2022-08-05T11:33:31 IST" name="test" finished-at="2022-08-05T11:35:20 IST" duration-ms="108795" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="kyc-home"]/div[2]/div/div[2]/cancel-process/div/div/div"}
-  (Session info: chrome=103.0.5060.134)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@ng-reflect-name="commodityCategory"]"}
+  (Session info: chrome=104.0.5112.79)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INL20-IAAAABDD', ip: '10.49.150.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+System info: host: 'INL20-IAAAABDD', ip: '10.49.81.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [309015253209af5ebd0cab8bd2958e0b, findElement {using=xpath, value=//*[@id="kyc-home"]/div[2]/div/div[2]/cancel-process/div/div/div}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55020/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 309015253209af5ebd0cab8bd2958e0b]]>
+Command: [786d194c6fc6939ccc5a3b1a5cba9403, findElement {using=xpath, value=//*[@ng-reflect-name="commodityCategory"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64937}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64937/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 786d194c6fc6939ccc5a3b1a5cba9403]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="kyc-home"]/div[2]/div/div[2]/cancel-process/div/div/div"}
-  (Session info: chrome=103.0.5060.134)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@ng-reflect-name="commodityCategory"]"}
+  (Session info: chrome=104.0.5112.79)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INL20-IAAAABDD', ip: '10.49.150.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+System info: host: 'INL20-IAAAABDD', ip: '10.49.81.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [309015253209af5ebd0cab8bd2958e0b, findElement {using=xpath, value=//*[@id="kyc-home"]/div[2]/div/div[2]/cancel-process/div/div/div}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55020/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 309015253209af5ebd0cab8bd2958e0b
+Command: [786d194c6fc6939ccc5a3b1a5cba9403, findElement {using=xpath, value=//*[@ng-reflect-name="commodityCategory"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64937}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64937/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 786d194c6fc6939ccc5a3b1a5cba9403
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,8 +50,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at pages.digilocker.cancelDigilocker(digilocker.java:31)
-at testScripts.ACQ.test(ACQ.java:80)
+at pages.commoditySelection.selectCommodity(commoditySelection.java:28)
+at testScripts.TRX_CD_OnlyCommodity.test(TRX_CD_OnlyCommodity.java:59)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,11 +86,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-07-27T11:18:52 IST" name="aMethod" finished-at="2022-07-27T11:18:52 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.TRX_CD_OnlyCommodity@d5b810e]" started-at="2022-08-05T11:35:20 IST" name="aMethod" finished-at="2022-08-05T11:35:20 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aMethod -->
-      </class> <!-- testScripts.ACQ -->
+      </class> <!-- testScripts.TRX_CD_OnlyCommodity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

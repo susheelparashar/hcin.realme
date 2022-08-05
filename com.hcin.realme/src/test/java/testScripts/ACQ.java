@@ -43,13 +43,15 @@ public class ACQ extends baseClass{
 		
 		testdataGenerator tdg=new testdataGenerator();
 		String mobile=tdg.generateMobNum();
+		String refMobile1=tdg.generateMobNum();
+		String refMobile2=tdg.generateMobNum();
 		String dob=tdg.generateDOB();
 		String panNo=tdg.generatePANno();
 		
 			
 		//login
 		login li=new login(driver, pr);
-		li.signin("homerselect", "homerselect");
+		li.signin("susheel.parashar", "Bbcl@123");
 		
 		//pos selection
 		POS po=new POS(driver, pr);
@@ -88,10 +90,9 @@ public class ACQ extends baseClass{
 		ad.captureAddress();
 		
 		//capture additional details
-		//additionalDetails addi=new additionalDetails(driver, pr);
-		//addi.captureAdditionalDetails();
-		
-		
+		additionalDetails addi=new additionalDetails(driver, pr);
+		addi.captureAdditionalDetails(refMobile1, refMobile2);
+				
 	}
 
 }

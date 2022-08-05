@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\susheel.parashar\AppData\Local\Temp\testng-eclipse-229587962\testng-customsuite.xml</span>
+                    <span>C:\Users\susheel.parashar\AppData\Local\Temp\testng-eclipse-1150705646\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testScripts.ACQ" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testScripts.TRX_CD_OnlyCommodity" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,7 +122,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testScripts.ACQ</span>
+              <span class="class-name">testScripts.TRX_CD_OnlyCommodity</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -130,15 +130,15 @@
                   <a name="test">
                   </a> <!-- test -->
                   <span class="method-name">test</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;kyc-home&quot;]/div[2]/div/div[2]/cancel-process/div/div/div&quot;}
-  (Session info: chrome=103.0.5060.134)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@ng-reflect-name=&quot;commodityCategory&quot;]&quot;}
+  (Session info: chrome=104.0.5112.79)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;INL20-IAAAABDD&apos;, ip: &apos;10.49.150.29&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+System info: host: &apos;INL20-IAAAABDD&apos;, ip: &apos;10.49.81.50&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [309015253209af5ebd0cab8bd2958e0b, findElement {using=xpath, value=//*[@id=&quot;kyc-home&quot;]/div[2]/div/div[2]/cancel-process/div/div/div}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55020/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 309015253209af5ebd0cab8bd2958e0b
+Command: [786d194c6fc6939ccc5a3b1a5cba9403, findElement {using=xpath, value=//*[@ng-reflect-name=&quot;commodityCategory&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SUSHEE~1.PAR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64937}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64937/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 786d194c6fc6939ccc5a3b1a5cba9403
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -155,8 +155,8 @@ Session ID: 309015253209af5ebd0cab8bd2958e0b
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at pages.digilocker.cancelDigilocker(digilocker.java:31)
-	at testScripts.ACQ.test(ACQ.java:80)
+	at pages.commoditySelection.selectCommodity(commoditySelection.java:28)
+	at testScripts.TRX_CD_OnlyCommodity.test(TRX_CD_OnlyCommodity.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,7 +194,7 @@ Session ID: 309015253209af5ebd0cab8bd2958e0b
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\susheel.parashar\AppData\Local\Temp\testng-eclipse-229587962\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\susheel.parashar\AppData\Local\Temp\testng-eclipse-1150705646\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -203,7 +203,7 @@ Session ID: 309015253209af5ebd0cab8bd2958e0b
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testScripts.ACQ&quot;/&gt;
+      &lt;class name=&quot;testScripts.TRX_CD_OnlyCommodity&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -246,13 +246,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
-data.setCell(0, 2, 'testScripts.ACQ')
-data.setCell(0, 3, 150111);
+data.setCell(0, 2, 'testScripts.TRX_CD_OnlyCommodity')
+data.setCell(0, 3, 108795);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -278,7 +278,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.ACQ</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.TRX_CD_OnlyCommodity</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">bMethod</span>
                 <span class="method-start">0 ms</span>
@@ -287,11 +287,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">test</span>
-                <span class="method-start">2709 ms</span>
+                <span class="method-start">3206 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">aMethod</span>
-                <span class="method-start">152827 ms</span>
+                <span class="method-start">112007 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

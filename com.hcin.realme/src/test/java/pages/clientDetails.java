@@ -30,7 +30,7 @@ public class clientDetails {
 		
 		driver.findElement(By.xpath(pr.getProperty("mobileNumber"))).sendKeys(mobile);
 		Thread.sleep(500);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue1"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("mobile number entered successfully");
 
 		// details
@@ -50,7 +50,7 @@ public class clientDetails {
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("eng"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("tick"))));
 		Thread.sleep(500);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("cont_details"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("personal details captured successfully");
 	}
 }

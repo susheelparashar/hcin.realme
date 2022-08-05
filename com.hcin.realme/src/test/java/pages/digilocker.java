@@ -20,6 +20,10 @@ public class digilocker {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",
 				driver.findElement(By.xpath(pr.getProperty("addressVerificationDigilocker"))));
+		Thread.sleep(1000);
+		driver.get("https://invx-np-realme01.in.nonprod:8443/realme/newCustomer");
+		
+		/*
 		// click on online KYC
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("onlineKyc"))));
 		// click on consent
@@ -32,7 +36,7 @@ public class digilocker {
 		// click on confirm cancel
 		Thread.sleep(1000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("confirmCancellation"))));
-		
+		*/
 	}
 
 }

@@ -24,6 +24,16 @@ public class explicitWait {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
+	public void visibilityOf(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void invisibilityOfElementLocated(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.invisibilityOf(element));
+	}
+	
 	public void textToBePresentInElement(WebElement element, String text) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.textToBePresentInElement(element, text));
@@ -46,6 +56,6 @@ public class explicitWait {
 
 	public void visibilityOfElementLocated(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated((By) element));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	} 
 }

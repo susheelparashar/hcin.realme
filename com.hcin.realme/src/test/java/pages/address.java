@@ -9,11 +9,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.DBManager;
 import utilities.explicitWait;
+import utilities.scrollPage;
 
 public class address {
 
@@ -25,33 +27,22 @@ public class address {
 		this.pr = pr;
 	}
 
-	public void visibilityOfElementLocated(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(element));
-
-	}
-
-	public void elementToBeClickable(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-
-	}
-
 	public void captureAddress() throws InterruptedException, ClassNotFoundException, SQLException, IOException {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		explicitWait w=new explicitWait(driver, pr);
 
 		// address verification
 		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("addressVerification"))));
-		//driver.navigate().refresh();
+		driver.navigate().refresh();
 		
 		// zoom out
 		System.out.println("star zooming out");
 		js.executeScript("document.body.style.zoom = '70%'");
 		Thread.sleep(500);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("drivingLicense"))));
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_address"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("driver license selected successfully");
 
 		// capture front address proof
@@ -63,10 +54,9 @@ public class address {
 		Thread.sleep(2000);
 
 		// capture back address proof
-		explicitWait w=new explicitWait(driver, pr);
-		WebElement checkBoxAddress=driver.findElement(By.xpath(pr.getProperty("checkBoxAddress")));
-		w.elementToBeClickable(checkBoxAddress);
-		js.executeScript("arguments[0].click();", checkBoxAddress);
+		WebElement checkAddress=  (WebElement) js.executeScript("return document.querySelector(\"#mat-checkbox-1 > label > span.mat-checkbox-label\")");
+		System.out.println(checkAddress);
+		js.executeScript("arguments[0].click();", checkAddress);
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("capture_back_address"))));
 		Thread.sleep(2000);
@@ -88,8 +78,12 @@ public class address {
 
 		// Correspondence address no
 		Thread.sleep(2000);
-		WebElement corress_address_no=driver.findElement(By.xpath(pr.getProperty("corress_address_no")));
+		WebElement corress_address_no= driver.findElement(By.xpath(pr.getProperty("corress_address_no")));
+		scrollPage sp=new scrollPage(driver, pr);
+		w.visibilityOf(corress_address_no);
 		js.executeScript("arguments[0].click();", corress_address_no);
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_Res_address"))));
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_Res_address"))));
 
@@ -97,7 +91,7 @@ public class address {
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("owned"))));
 		Thread.sleep(2000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue_housingType"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		System.out.println("res address details captured successfully");
 	}
 }
