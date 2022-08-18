@@ -20,7 +20,7 @@ public class signLoanDocuments {
 		this.pr = pr;
 	}
 	
-	public void pushForCappSigning() throws InterruptedException {
+	public void pushForCappSigningCD() throws InterruptedException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Thread.sleep(1000);
@@ -37,4 +37,21 @@ public class signLoanDocuments {
 
 	}
 
+	public void pushForCappSigningHA() throws InterruptedException {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		explicitWait w = new explicitWait(driver, pr);
+		
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("SignTheApplication"))));		
+		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
+		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("OK"))));
+
+		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
+		System.out.println("pushed transaction to CAPP sucessfully");
+
+	}
 }

@@ -27,11 +27,11 @@ import pages.signLoanDocuments;
 import pages.startTransaction;
 import pages.verifyCustomerDetails;
 
-public class TRX_CD_OnlyCommodity extends baseClass {
+public class TRX_HA extends baseClass {
 	@Test
 	public void test() throws InterruptedException, IOException, ClassNotFoundException, SQLException {
-		String mobile = "9205755416";
-		String contractCode = "4200081127";
+		String mobile = "7678410806";
+		String contractCode = "4200090809";
 
 		// login
 		login li = new login(driver, pr);
@@ -50,38 +50,31 @@ public class TRX_CD_OnlyCommodity extends baseClass {
 		st.verifyContract(mobile, contractCode);
 
 		
-		  //verify customer details 
-		  verifyCustomerDetails vcd= new verifyCustomerDetails(driver, pr); 
-		  vcd.verifyDetails();
+		//verify customer details 
+		verifyCustomerDetails vcd= new verifyCustomerDetails(driver, pr); 
+		vcd.verifyDetails();
 		  
-		  //commodity selection 
-		  commoditySelection cs=new commoditySelection(driver,
-		  pr); cs.selectCommodity(); cs.verifyCommodity();
+		//commodity selection 
+		commoditySelection cs=new commoditySelection(driver, pr); 
+		cs.selectHomeAppliance();
+		cs.verifyCommodity();
 		  
-		  //commodity selection 
-		  offers o=new offers(driver, pr);
-		  o.selectStandardOffers();
+		//commodity selection 
+		offers o=new offers(driver, pr);
+		o.selectStandardOffers();
 		  
-		  //only commodity 
-		  cutsomerWishes cw=new cutsomerWishes(driver, pr);
-		  cw.onlyCommodity();
+		//only commodity 
+		cutsomerWishes cw=new cutsomerWishes(driver, pr);
+		cw.onlyCommodity();
 		  
-		  //review transaction 
-		  reviewTransaction rt=new reviewTransaction(driver, pr);
-		  rt.review();
+		//review transaction 
+		reviewTransaction rt=new reviewTransaction(driver, pr);
+		rt.review();
 		  
-		  //imei screen
-		  imeiSerialNumber is=new imeiSerialNumber(driver, pr);
-		  is.captureImeiSn();
-		 
-		  // invoice screen
-		  invoiceDetails invoice=new invoiceDetails(driver, pr);
-		  invoice.captureInvoice();
+		//signLoanDocuments
+		signLoanDocuments sign=new signLoanDocuments(driver, pr);
+		sign.pushForCappSigningHA();  
 		  
-		  //signLoanDocuments
-		  signLoanDocuments sign=new signLoanDocuments(driver, pr);
-		  sign.pushForCappSigning();
-
 	}
 
 }

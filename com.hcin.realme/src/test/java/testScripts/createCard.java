@@ -24,7 +24,7 @@ import pages.photo;
 import pages.photoDigilocker;
 import utilities.testdataGenerator;
 
-public class ACQ extends baseClass{
+public class createCard extends baseClass{
 	@Test
 	public void test() throws InterruptedException, IOException, ClassNotFoundException, SQLException
 	{

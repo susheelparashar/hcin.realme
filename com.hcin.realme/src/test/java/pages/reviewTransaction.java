@@ -8,7 +8,6 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import utilities.click;
 import utilities.explicitWait;
 import utilities.scrollPage;
 
@@ -37,7 +36,7 @@ public class reviewTransaction {
 		explicitWait w = new explicitWait(driver, pr);
 		w.invisibilityOfElementLocated(driver.findElement(By.xpath(pr.getProperty("loader"))));
 	
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 
 

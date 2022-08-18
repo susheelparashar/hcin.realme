@@ -66,9 +66,10 @@ public class additionalDetails {
 		Thread.sleep(2000);
 
 		// joining fee
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("joiningFeeNo"))));
+		
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("joiningFeeYes"))));		
 		Thread.sleep(1000);
-
+		
 		// reference1
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("ref1Relation"))));
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("father"))));

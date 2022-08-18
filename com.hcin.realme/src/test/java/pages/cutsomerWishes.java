@@ -8,7 +8,6 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import utilities.click;
 import utilities.explicitWait;
 
 public class cutsomerWishes {
@@ -27,7 +26,7 @@ public class cutsomerWishes {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Thread.sleep(2000);
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("OK"))));
+		//js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("OK"))));
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("continue"))));
 		
