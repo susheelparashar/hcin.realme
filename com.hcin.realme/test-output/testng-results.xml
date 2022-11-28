@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-16T09:37:04 IST" name="Default suite" finished-at="2022-08-16T09:40:03 IST" duration-ms="178625">
+  <suite started-at="2022-09-16T17:17:18 IST" name="Default suite" finished-at="2022-09-16T17:19:45 IST" duration-ms="146673">
     <groups>
     </groups>
-    <test started-at="2022-08-16T09:37:04 IST" name="Default test" finished-at="2022-08-16T09:40:03 IST" duration-ms="178625">
-      <class name="testScripts.ACQ">
-        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-08-16T09:37:04 IST" name="bMethod" finished-at="2022-08-16T09:37:07 IST" duration-ms="2651" status="PASS">
+    <test started-at="2022-09-16T17:17:18 IST" name="Default test" finished-at="2022-09-16T17:19:45 IST" duration-ms="146673">
+      <class name="testScripts.createCard">
+        <test-method is-config="true" signature="bMethod()[pri:0, instance:testScripts.createCard@17497425]" started-at="2022-09-16T17:17:18 IST" name="bMethod" finished-at="2022-09-16T17:17:22 IST" duration-ms="3569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bMethod -->
-        <test-method signature="test()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-08-16T09:37:07 IST" name="test" finished-at="2022-08-16T09:40:03 IST" duration-ms="175940" status="PASS">
+        <test-method signature="test()[pri:0, instance:testScripts.createCard@17497425]" started-at="2022-09-16T17:17:22 IST" name="test" finished-at="2022-09-16T17:19:45 IST" duration-ms="143066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.ACQ@d5b810e]" started-at="2022-08-16T09:40:03 IST" name="aMethod" finished-at="2022-08-16T09:40:03 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="aMethod()[pri:0, instance:testScripts.createCard@17497425]" started-at="2022-09-16T17:19:45 IST" name="aMethod" finished-at="2022-09-16T17:19:45 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aMethod -->
-      </class> <!-- testScripts.ACQ -->
+      </class> <!-- testScripts.createCard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.TRX_HA">
+      <class name="testScripts.createCard">
         <methods>
           <include name="bMethod"/>
           <include name="aMethod"/>
           <include name="test"/>
         </methods>
-      </class> <!-- testScripts.TRX_HA -->
+      </class> <!-- testScripts.createCard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

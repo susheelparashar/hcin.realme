@@ -47,7 +47,7 @@ public class additionalDetails {
 		// cash payment
 		WebElement cashPayment = driver.findElement(By.xpath(pr.getProperty("cashPayment")));
 		cashPayment.sendKeys("500");
-
+		
 		// monthly debt
 		WebElement debt = driver.findElement(By.xpath(pr.getProperty("debt")));
 		debt.sendKeys("1000");
@@ -72,7 +72,7 @@ public class additionalDetails {
 		
 		// reference1
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("ref1Relation"))));
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("father"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("Professor"))));
 		driver.findElement(By.xpath(pr.getProperty("ref1FirstName"))).sendKeys("refOneFirstName");
 		driver.findElement(By.xpath(pr.getProperty("ref1LastName"))).sendKeys("refOneLastName");
 		driver.findElement(By.xpath(pr.getProperty("ref1Mobile"))).sendKeys(refMobile1);
@@ -80,7 +80,7 @@ public class additionalDetails {
 		
 		// reference2
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("ref2Relation"))));
-		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("mother"))));
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("Mother"))));
 		driver.findElement(By.xpath(pr.getProperty("ref2FirstName"))).sendKeys("refTwoFirstName");
 		driver.findElement(By.xpath(pr.getProperty("ref2LastName"))).sendKeys("refTwoLastName");
 		driver.findElement(By.xpath(pr.getProperty("ref2Mobile"))).sendKeys(refMobile2);

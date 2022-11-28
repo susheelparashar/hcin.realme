@@ -39,6 +39,7 @@ public class baseClass {
 		pr=new Properties();
 		pr.load(fr);
 		
+		
 	}
 	
 	@AfterMethod

@@ -4,33 +4,30 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Locale;
 
-import org.testng.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.html5.LocalStorage;
+import org.openqa.selenium.html5.SessionStorage;
+import org.openqa.selenium.html5.WebStorage;
+import org.openqa.selenium.remote.Augmenter;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.github.javafaker.Faker;
 
 import base.baseClass;
 import pages.POS;
-import pages.additionalDetails;
-import pages.address;
-import pages.addressDigilocker;
-import pages.cappSms;
 import pages.clientDetails;
 import pages.consent;
 import pages.dashboard;
-import pages.digilocker;
 import pages.login;
-import pages.pan;
-import pages.photo;
-import pages.photoDigilocker;
-import utilities.SessionStorage;
 import utilities.testdataGenerator;
 
-public class createCard extends baseClass{
+public class test extends baseClass {
+	
 	@Test
-	public void test() throws InterruptedException, IOException, ClassNotFoundException, SQLException
-	{
+	 public void TestSessionStorage() throws IOException, ClassNotFoundException, InterruptedException, SQLException
+	 {
+		
 		Faker faker = new Faker(new Locale("en-IND"));
 		String fullname=faker.name().firstName()+" "+faker.name().lastName();
 		String email=faker.name().firstName()+faker.name().lastName()+"@gmail.com";
@@ -71,35 +68,8 @@ public class createCard extends baseClass{
 		//consent
 		consent c=new consent(driver, pr);
 		c.verifyOtp(mobile);
-				
-		//capp sms 
-		cappSms cs=new cappSms(driver, pr);
-		cs.clickCappPopup();
 		
-		//capture photo
-		photoDigilocker ph=new photoDigilocker(driver, pr);
-		ph.capturePhoto();
-		
-		//
-		SessionStorage ss=new SessionStorage(driver, pr);
-		ss.getItem();
-		
-		//cancel digilocker
-		digilocker digi=new digilocker(driver, pr);
-		digi.cancelDigilocker();
-		
-		//capture pan
-		pan	p=new pan(driver, pr);
-		p.capturePan(panNo, fathername, mothername);
-		
-		//capture address
-		address	ad=new address(driver, pr);
-		ad.captureAddress();
-		
-		//capture additional details
-		additionalDetails addi=new additionalDetails(driver, pr);
-		addi.captureAdditionalDetails(refMobile1, refMobile2);
-				
-	}
-
+		//get session storage data
+		SessionStorage s=new SessionStorage(driver, pr);
+	 }
 }

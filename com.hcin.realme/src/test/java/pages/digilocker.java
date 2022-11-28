@@ -23,6 +23,8 @@ public class digilocker {
 		Thread.sleep(1000);
 		driver.get("https://invx-np-realme01.in.nonprod:8443/realme/newCustomer");
 		
+		//https://invx-np-realme01.in.nonprod:8443/onsitego/newCustomer
+		
 		/*
 		// click on online KYC
 		js.executeScript("arguments[0].click();", driver.findElement(By.xpath(pr.getProperty("onlineKyc"))));

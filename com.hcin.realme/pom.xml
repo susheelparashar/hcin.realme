@@ -66,6 +66,20 @@
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
+		<dependency>
+   <groupId>net.lightbody.bmp</groupId>
+   <artifactId>browsermob-core</artifactId>
+   <version>2.1.5</version>
+   <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+
 
 	</dependencies>
 </project>
